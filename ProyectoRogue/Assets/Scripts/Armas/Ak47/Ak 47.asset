@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1c4aafe6a039f4aa8ef202f6136f6a, type: 3}
+  m_Name: Ak 47
+  m_EditorClassIdentifier: 
+  Name: AK 47
+  Features: 
+  prefab_Bullet: {fileID: 4002373928760069883, guid: ee545199692201d4086eaeb03830ef89, type: 3}
+  fireForce: 30
