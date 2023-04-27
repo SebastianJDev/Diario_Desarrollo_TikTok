@@ -106,11 +106,11 @@ MonoBehaviour:
   Impulso: {x: 2, y: 2}
   TiempoSinControl: 1
   explosion: {fileID: 5175957894158446416, guid: 8aef77b7c4a3d0c49bea87924cf1025f, type: 3}
-  lineOfsite: 25
-  shootingRange: 10
-  bullet: {fileID: 3715779216725893780, guid: 9e0caec6cf2af504aa1c33473aeb5915, type: 3}
+  lineOfsite: 20
+  shootingRange: 15
+  bullet: {fileID: 4773145322353558269, guid: d3ea55035527ef44db8fad0338581c37, type: 3}
   bulletParent: {fileID: 5790443556320737165}
-  fireRate: 2
+  fireRate: 1
   enemy: {fileID: 5790443556320737167}
 --- !u!95 &2927614660131033305
 Animator:

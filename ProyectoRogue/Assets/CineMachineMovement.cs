@@ -13,17 +13,31 @@ public class CineMachineMovement : MonoBehaviour
     private float tiempoMovimientoTotal;
     private float intencidadInicial;
 
+    private Transform target;
+
     private void Awake()
     {
-        Instance = this;
+        Debug.Log("Awake - CineMachine");
+        if (CineMachineMovement.Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
         cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
         cinemachineMultiChanelPerlin = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
+    private void Start()
+    {
+        Debug.Log("Start - CineMachine");
+        target =  GameObject.FindGameObjectWithTag("Player").transform;
+        cinemachineVirtualCamera.Follow = target;
+    }
+
     public void MoverCamara(float intensidad, float frecuencia, float tiempo)
     {
-        cinemachineMultiChanelPerlin.m_AmplitudeGain = intensidad;
         cinemachineMultiChanelPerlin.m_FrequencyGain = frecuencia;
+        cinemachineMultiChanelPerlin.m_AmplitudeGain = intensidad;
         intencidadInicial = intensidad;
         tiempoMovimientoTotal = tiempo;
         tiempoMovimiento = tiempo;

@@ -29,16 +29,19 @@ public class BosEnemy : MonoBehaviour
 
 
 
-    private void Awake()
+    void Awake()
     {
+        Debug.Log("Awake - Boss");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
     void Start()
     {
-        target = PlayerMove.instance.transform;
+        Debug.Log("Start - Boss");
         //target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        target = PlayerMove.instance.transform;
     }
+
     private void FixedUpdate()
     {
         //Rotate

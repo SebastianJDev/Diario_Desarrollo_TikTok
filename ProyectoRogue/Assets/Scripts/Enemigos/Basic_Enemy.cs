@@ -17,19 +17,27 @@ public class Basic_Enemy : MonoBehaviour
     [SerializeField] GameObject explosion;
     [SerializeField] GameObject XP;
     [SerializeField] private float lineOfsite;
+    [SerializeField] private CineMachineMovement Cinemachines;
 
     public Transform enemy;
 
 
     private void Awake()
     {
+        Debug.Log("Awake - Basic-Enemy");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         //target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        Debug.Log("Fin Awake - Basic-Enemy");
+
     }
     void Start()
     {
+        Debug.Log("Start - Basic-Enemy");
         target = PlayerMove.instance.transform;
+        Cinemachines = CineMachineMovement.Instance;
+        Debug.Log("Fin Start - Basic-Enemy");
+
     }
     private void FixedUpdate()
     {
@@ -59,7 +67,7 @@ public class Basic_Enemy : MonoBehaviour
             case "Bullet":
                 Healt -= other.gameObject.GetComponent<Bala>().info.Damage;
                 animator.SetTrigger("Daño");
-                CineMachineMovement.Instance.MoverCamara(2,2,0.5f);
+                Cinemachines.MoverCamara(2,2,0.5f);
                 break;
         }        
     }
@@ -72,12 +80,12 @@ public class Basic_Enemy : MonoBehaviour
                 rb.velocity = new Vector2(0, 0);
                 other.gameObject.GetComponent<HealthPlayer>().TomarDaño(20,other.GetContact(0).normal);
                 animator.SetTrigger("Daño");
-                CineMachineMovement.Instance.MoverCamara(4,4,0.9f);
+                Cinemachines.MoverCamara(4,4,0.9f);
                 break;
             case "Gancho":
                 Debug.Log("Activo Impulso Enemigo");
                 animator.SetTrigger("Daño");
-                CineMachineMovement.Instance.MoverCamara(4,4,0.9f);
+                Cinemachines.MoverCamara(4,4,0.9f);
                 rb.velocity = new Vector2(Impulso.x * other.GetContact(0).normal.x, Impulso.y * other.GetContact(0).normal.y);
                 StartCoroutine(Esperar());
                 Healt -= 10;

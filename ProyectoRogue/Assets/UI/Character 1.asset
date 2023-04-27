@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ef2392b9ef19849a6476dc6492e15e, type: 3}
+  m_Name: Character 1
+  m_EditorClassIdentifier: 
+  personajeJugable: {fileID: 5348602254156038067, guid: f71d13b1540dcf746a6890a6cc4ebcc4, type: 3}
+  Imagen: {fileID: -2413806693520163455, guid: 3a3171137e4e4e04aa5e43c4fbecedaf, type: 3}
+  Nombre: Character 1

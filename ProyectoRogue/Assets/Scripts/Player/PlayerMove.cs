@@ -9,8 +9,7 @@ public class PlayerMove : MonoBehaviour
     public static PlayerMove instance;
     //Movimiento
     private Rigidbody2D rb;
-    public  List<GameObject> Armas = new List<GameObject>();
-
+    [SerializeField] private GameObject Arma;
     //Golpe
     public bool sePuedeMover = true;
     [SerializeField] private Vector2 velocidadRebote;
@@ -27,12 +26,14 @@ public class PlayerMove : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("Awake - PlayerMove");
         instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Start()
     {
+        Debug.Log("Start - PlayerMove");
         acceleration = normalAceleration;
     }
     void FixedUpdate()
@@ -46,40 +47,20 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         ProccesInput();
-        CambiarArma();
-       
     }
     void ProccesInput()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         arrow.up = (mousePos - (Vector2)transform.position).normalized;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Arma.SetActive(true);
+        }
     }
     public void Move()
     {
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         rb.velocity += movementInput * acceleration * Time.fixedDeltaTime;
-    }
-
-    void CambiarArma()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Armas[0].gameObject.SetActive(true);
-            Armas[1].gameObject.SetActive(false);
-            Armas[2].gameObject.SetActive(false);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            Armas[1].gameObject.SetActive(true);
-            Armas[0].gameObject.SetActive(false);
-            Armas[2].gameObject.SetActive(false);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            Armas[2].gameObject.SetActive(true);
-            Armas[0].gameObject.SetActive(false);
-            Armas[1].gameObject.SetActive(false);
-        }
     }
 
     public void Rebote(Vector2 puntoGolpe)
