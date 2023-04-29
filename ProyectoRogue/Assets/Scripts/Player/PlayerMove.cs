@@ -13,23 +13,17 @@ public class PlayerMove : MonoBehaviour
     //Golpe
     public bool sePuedeMover = true;
     [SerializeField] private Vector2 velocidadRebote;
-
-
     //Rotacion
     [SerializeField] public float normalAceleration;
     [SerializeField] public float acceleration;
     [SerializeField] public Vector2 movementInput;
     [SerializeField] public Transform arrow;
 
-    
-
-
     void Awake()
     {
         instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
-
     void Start()
     {
         acceleration = normalAceleration;
@@ -39,7 +33,6 @@ public class PlayerMove : MonoBehaviour
         if (sePuedeMover)
         {
             Move();
-            
         }
     }
     void Update()
