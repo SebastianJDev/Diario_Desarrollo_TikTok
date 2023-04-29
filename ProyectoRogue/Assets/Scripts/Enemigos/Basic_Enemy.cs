@@ -24,19 +24,13 @@ public class Basic_Enemy : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Awake - Basic-Enemy");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Debug.Log("Fin Awake - Basic-Enemy");
-
     }
     void Start()
     {
-        Debug.Log("Start - Basic-Enemy");
         target = PlayerMove.instance.transform;
         Cinemachines = CineMachineMovement.Instance;
-        Debug.Log("Fin Start - Basic-Enemy");
 
     }
     private void FixedUpdate()

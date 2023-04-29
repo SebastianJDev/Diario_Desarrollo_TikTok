@@ -26,14 +26,12 @@ public class PlayerMove : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Awake - PlayerMove");
         instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Start()
     {
-        Debug.Log("Start - PlayerMove");
         acceleration = normalAceleration;
     }
     void FixedUpdate()
@@ -46,6 +44,8 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
+        if (GameManager.Instance.IsGamePaused())
+            return;
         ProccesInput();
     }
     void ProccesInput()

@@ -17,6 +17,15 @@ public class HealthPlayer : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if(health <= 0)
+        {
+            gameObject.SetActive(false);
+            GameManager.Instance.VolverAJugar();
+        }
+    }
+
     public void TomarDaño(float daño)
     {
         health -= daño;

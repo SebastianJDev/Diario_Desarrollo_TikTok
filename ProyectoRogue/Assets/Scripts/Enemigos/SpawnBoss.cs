@@ -8,7 +8,6 @@ public class SpawnBoss : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start - SpawnBoss");
         Instantiate(Boss,transform.position,Quaternion.identity);
     }
 }

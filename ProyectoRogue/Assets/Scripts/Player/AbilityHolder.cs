@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class AbilityHolder : MonoBehaviour
 {
-    public Ability ability;
+    public List<Ability> Abilities;
     float cooldownTime;
     float activateTime;
-
     enum AbilityState
     {
         ready,
@@ -16,18 +15,18 @@ public class AbilityHolder : MonoBehaviour
     }
     AbilityState state = AbilityState.ready;
 
-    public KeyCode key;
+    public List<KeyCode>Key;
 
     void Update()
     {
             switch (state)
         {
             case AbilityState.ready:
-                if (Input.GetKeyDown(key))
+                if (Input.GetKeyDown(Key[0]))
                 {
-                    ability.Activate(gameObject);
+                    Abilities[0].Activate(gameObject);
                     state = AbilityState.active;
-                    activateTime = ability.activeTime;
+                    activateTime = Abilities[0].activeTime;
                 }
                 break;
             case AbilityState.active:
@@ -37,9 +36,9 @@ public class AbilityHolder : MonoBehaviour
                 }
                 else
                 {
-                    ability.BeginCooldown(gameObject);
+                    Abilities[0].BeginCooldown(gameObject);
                     state = AbilityState.cooldown;
-                    cooldownTime = ability.cooldownTime;
+                    cooldownTime = Abilities[0].cooldownTime;
                 }
                 break;
             case AbilityState.cooldown:

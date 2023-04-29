@@ -10,6 +10,7 @@ public class menuSeleccionPersonaje : MonoBehaviour
     private int index;
     [SerializeField] private Image imagen;
     [SerializeField] private TextMeshProUGUI nombre;
+    [SerializeField] private TextMeshProUGUI stats;
     private GameManager gameManager;
 
     private void Start()
@@ -29,6 +30,7 @@ public class menuSeleccionPersonaje : MonoBehaviour
         PlayerPrefs.SetInt("JugadorIndex", index);
         imagen.sprite = gameManager.personajes[index].Imagen;
         nombre.text = gameManager.personajes[index].Nombre;
+        stats.text = gameManager.personajes[index].Stats;
     }
 
     public void SiguientePersonaje()
@@ -54,10 +56,5 @@ public class menuSeleccionPersonaje : MonoBehaviour
             index -= 1;
         }
         CambiarPantalla();
-    }
-
-    public void IniciarJuego()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

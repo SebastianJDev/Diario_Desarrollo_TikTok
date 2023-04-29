@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personajeJugable: {fileID: 5348602254156038067, guid: 6204cd86aab8fa94fa1e414b3dd6fe51, type: 3}
   Imagen: {fileID: 7482667652216324306, guid: 2472dc92dbb6f2c409ee758ea47af242, type: 3}
-  Nombre: Character 2
+  Nombre: Tirador
+  Stats: Stats sin definir xd

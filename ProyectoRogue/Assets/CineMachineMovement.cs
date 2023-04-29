@@ -6,7 +6,7 @@ using Cinemachine;
 public class CineMachineMovement : MonoBehaviour
 {
     public static CineMachineMovement Instance;
-    private CinemachineVirtualCamera cinemachineVirtualCamera;
+    public CinemachineVirtualCamera cinemachineVirtualCamera;
     private CinemachineBasicMultiChannelPerlin cinemachineMultiChanelPerlin;
 
     private float tiempoMovimiento;
@@ -17,7 +17,6 @@ public class CineMachineMovement : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Awake - CineMachine");
         if (CineMachineMovement.Instance == null)
         {
             Instance = this;
@@ -29,7 +28,6 @@ public class CineMachineMovement : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start - CineMachine");
         target =  GameObject.FindGameObjectWithTag("Player").transform;
         cinemachineVirtualCamera.Follow = target;
     }

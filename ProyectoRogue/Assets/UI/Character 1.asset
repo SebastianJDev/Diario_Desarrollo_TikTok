@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personajeJugable: {fileID: 5348602254156038067, guid: f71d13b1540dcf746a6890a6cc4ebcc4, type: 3}
   Imagen: {fileID: -2413806693520163455, guid: 3a3171137e4e4e04aa5e43c4fbecedaf, type: 3}
-  Nombre: Character 1
+  Nombre: Agro
+  Stats: 'Stats sin definir xd '

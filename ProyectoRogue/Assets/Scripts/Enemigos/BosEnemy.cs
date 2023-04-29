@@ -31,14 +31,11 @@ public class BosEnemy : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Awake - Boss");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
     void Start()
     {
-        Debug.Log("Start - Boss");
-        //target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         target = PlayerMove.instance.transform;
     }
 

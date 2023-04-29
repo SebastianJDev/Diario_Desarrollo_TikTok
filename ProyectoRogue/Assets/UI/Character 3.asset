@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personajeJugable: {fileID: 5348602254156038067, guid: c4513bb63d4d47940b3f010fae9c134c, type: 3}
   Imagen: {fileID: 7482667652216324306, guid: d3404bc445a23364483bf85c6765c5ab, type: 3}
-  Nombre: Character 3
+  Nombre: Mago
+  Stats: Stats sin definir xd

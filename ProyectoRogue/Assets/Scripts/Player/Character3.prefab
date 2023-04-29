@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1428f021757cc46be353f570065fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 100
   tiempoPerdidaControl: 1
 --- !u!114 &5348602254156038087
 MonoBehaviour:
