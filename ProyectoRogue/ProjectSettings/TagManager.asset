@@ -46,9 +46,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Paredes
-    uniqueID: 2567294279
-    locked: 0
   - name: Decoracion
     uniqueID: 2778681189
+    locked: 0
+  - name: Sombra
+    uniqueID: 147678533
+    locked: 0
+  - name: Player y Enemigos
+    uniqueID: 2209887909
+    locked: 0
+  - name: Paredes
+    uniqueID: 2567294279
     locked: 0
