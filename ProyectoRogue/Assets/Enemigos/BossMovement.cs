@@ -9,9 +9,6 @@ public class BossMovement : MonoBehaviour
     public CreatorEnemi info;
     [SerializeField] private int _Health;
 
-    //Animator
-    private Animator _anim;
-
     //Movimiento
     private Rigidbody2D _rb;
 
@@ -39,7 +36,6 @@ public class BossMovement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _anim = GetComponent<Animator>();
         _Health = info.GetHealth();
     }
 
@@ -83,7 +79,6 @@ public class BossMovement : MonoBehaviour
                 BulletTwo bullet = other.gameObject.GetComponent<BulletTwo>();
                 _Health -= bullet.Info.GetDamageWeapon();
                 CineMachineMovement.Instance.MoverCamara(1f, 1f, 0.3f);
-                _anim.SetTrigger("Damage");
                 Destroy(other.gameObject);
                 break;
         }

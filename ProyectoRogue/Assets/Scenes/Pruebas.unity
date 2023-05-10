@@ -1196,7 +1196,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1134543482}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 19
+    OrthographicSize: 11
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -4396,7 +4396,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 19
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6004,10 +6004,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 4727801143276487421, guid: 277b4b221adb1bb419d0ad7c035dd4ac, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 277b4b221adb1bb419d0ad7c035dd4ac, type: 3}
 --- !u!1001 &4898200291198320216
@@ -6073,17 +6069,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4898200292025354647, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ec5806dfe5b693847a0a3da4b8bba96d, type: 3}
+    - target: {fileID: 4898200292025354647, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898200292025354647, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898200292025354647, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898200292035197737, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898200292857768778, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898200292857768778, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898200292857768778, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898200292857768779, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 45b68d91a038e354da6d7d6ad4be2fd2, type: 3}
     - target: {fileID: 4898200292857768779, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
       propertyPath: m_Color.b
-      value: 0.16470589
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4898200292857768779, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
       propertyPath: m_Color.g
-      value: 0.14509805
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4898200292857768779, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}
       propertyPath: m_Color.r
-      value: 0.09019608
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9073902f321c3be4890d6a195af3b02a, type: 3}

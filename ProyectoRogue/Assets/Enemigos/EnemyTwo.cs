@@ -9,9 +9,6 @@ public class EnemyTwo : MonoBehaviour
     public CreatorEnemi Info;
     private int _Health;
 
-    //Animator
-    private Animator _anim;
-
     //Target
     private Transform _target;
 
@@ -28,7 +25,6 @@ public class EnemyTwo : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _anim = GetComponent<Animator>();
         _Health = Info.GetHealth();
     }
 
@@ -58,7 +54,6 @@ public class EnemyTwo : MonoBehaviour
                 BulletTwo bullet = other.gameObject.GetComponent<BulletTwo>();
                 _Health -= bullet.Info.GetDamageWeapon();
                 CineMachineMovement.Instance.MoverCamara(1f, 1f, 0.3f);
-                _anim.SetTrigger("Damage");
                 Destroy(other.gameObject);
                 break;
         }
