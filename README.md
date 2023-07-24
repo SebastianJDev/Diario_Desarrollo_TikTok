@@ -1,2 +1,1 @@
-# RogueLike
-Proyecto para publicar en Diciembre RogueLike
+# Diario_Desarrollo_TikTok
